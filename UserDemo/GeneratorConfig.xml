@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+		<property name="beginningDelimiter" value=""/>
+		<property name="endingDelimiter" value=""/>
+		
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<property name="mappers" value="com.gzb.UserDemo.utils.MyMapper"/>
+			
+		</plugin>
+		
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" 
+						connectionURL="jdbc:mysql://192.168.0.102:3306/user"
+						userId="root"
+						password="rootroot">
+		</jdbcConnection>
+		
+		<!-- 生成的po包 -->
+		<javaModelGenerator targetPackage="com.gzb.UserDemo.po" targetProject="src/main/java"></javaModelGenerator>
+		
+		<!-- 生成mapper所在目录 -->
+		<sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"></sqlMapGenerator>
+		
+		<!-- 配置mapper对应的java影射 -->
+		<javaClientGenerator targetPackage="com.gzb.UserDemo.dao" targetProject="src/main/java" type="XMLMAPPER"></javaClientGenerator>
+		
+		<!-- 读取数据库的表 -->
+		<table tableName="tb_user"></table>
+		
+		
+	</context>
+</generatorConfiguration>
+  
+ 

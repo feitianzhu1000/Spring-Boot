@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>静态资源</title>
+</head>
+<body>
+    <div>
+        hello Springboot
+    </div>
+
+    <!--文件上传-->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file"
+               id="file"
+               name="file"
+               value="选择图片"
+               accept="image/*">
+        >
+        <div>
+            <input type="submit" value="上传">
+        </div>
+
+    </form>
+</body>
+</html>

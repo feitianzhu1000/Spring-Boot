@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="JSensorsTest" />
+        <module name="springbootjdbclearn" />
+        <module name="spring-boot-demo-admin-server" />
+        <module name="MybatisTest" />
+        <module name="spring-boot-demo-template-thymeleaf" />
+        <module name="ScheduleTask" />
+        <module name="HelloWorldDemo" />
+      </profile>
+      <profile name="Annotation profile for demo-logback" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+          <entry name="$PROJECT_DIR$/../java/Maven/repository/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
+        </processorPath>
+        <module name="demo-logback" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="HelloWorldDemo" options="-parameters" />
+      <module name="JSensorsTest" options="-parameters" />
+      <module name="MybatisTest" options="-parameters" />
+      <module name="ScheduleTask" options="-parameters" />
+      <module name="demo-logback" options="-parameters" />
+      <module name="spring-boot-demo-admin-server" options="-parameters" />
+      <module name="spring-boot-demo-template-thymeleaf" options="-parameters" />
+      <module name="springbootjdbclearn" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/HelloWorldDemo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JSensorsTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MybatisTest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ScheduleTask/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-logback/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-admin-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-boot-demo-template-thymeleaf/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springbootjdbclearn/src/main/java" charset="UTF-8" />
+  </component>
+</project>

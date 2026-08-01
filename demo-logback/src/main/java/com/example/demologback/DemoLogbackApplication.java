@@ -11,6 +11,7 @@ public class DemoLogbackApplication {
 
     public static void main(String[] args) {
 
+
         ConfigurableApplicationContext context = SpringApplication.run(DemoLogbackApplication.class, args);
 
         int length = context.getBeanDefinitionNames().length;

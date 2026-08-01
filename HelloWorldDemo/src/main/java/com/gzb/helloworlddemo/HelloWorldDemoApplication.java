@@ -15,6 +15,7 @@ public class HelloWorldDemoApplication {
     @ResponseBody
     public String hello(){
         System.out.println("【日志监控】进入方法");
+        System.out.println("测试提交");
         return "Hello World";
     }
 

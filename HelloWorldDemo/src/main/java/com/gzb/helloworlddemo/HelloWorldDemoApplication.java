@@ -17,6 +17,7 @@ public class HelloWorldDemoApplication {
         System.out.println("【日志监控】进入方法");
         System.out.println("测试提交");
         System.out.println("第二次提交");
+        System.out.println("第三次提交");
         return "Hello World";
     }
 

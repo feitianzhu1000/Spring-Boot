@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Markdown 在线编辑和预览测试页面">
+    <title>Markdown 预览工作台</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+    <a class="brand" href="/" aria-label="返回首页">
+        <span class="brand-mark">M</span>
+        <span>
+            <strong>Markdown</strong>
+            <small>Thymeleaf 预览工作台</small>
+        </span>
+    </a>
+    <div class="runtime-pill">
+        <span class="status-dot"></span>
+        Spring Boot · Thymeleaf
+    </div>
+</header>
+
+<main class="app-shell">
+    <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">WRITE AND PREVIEW</p>
+        <h1 id="page-title">Markdown 测试页面</h1>
+        <p>在左侧输入 Markdown，右侧查看由 Java 后端渲染出的 HTML 效果。</p>
+    </section>
+
+    <section class="workspace" aria-label="Markdown 编辑和预览">
+        <article class="panel editor-panel">
+            <div class="panel-header">
+                <div>
+                    <p class="panel-kicker">EDITOR</p>
+                    <h2>编辑区</h2>
+                </div>
+                <div class="toolbar">
+                    <button class="tool-button" type="button" id="copyMarkdown">复制</button>
+                    <button class="tool-button" type="button" id="clearMarkdown">清空</button>
+                </div>
+            </div>
+            <textarea id="markdownInput" spellcheck="false" th:text="${markdown}"></textarea>
+            <div class="panel-footer">
+                <span id="editorStats">0 行 · 0 字</span>
+                <span id="previewStatus">已加载</span>
+            </div>
+        </article>
+
+        <article class="panel preview-panel">
+            <div class="panel-header">
+                <div>
+                    <p class="panel-kicker">PREVIEW</p>
+                    <h2>预览区</h2>
+                </div>
+                <a class="tool-link" href="#syntax">语法速查</a>
+            </div>
+            <div id="markdownPreview" class="markdown-body" th:utext="${previewHtml}"></div>
+        </article>
+    </section>
+
+    <section class="sample-bar" aria-label="示例模板">
+        <button class="sample-button" type="button" data-sample-source="sample-log">学习日志</button>
+        <button class="sample-button" type="button" data-sample-source="sample-table">表格示例</button>
+        <button class="sample-button" type="button" data-sample-source="sample-code">代码示例</button>
+    </section>
+
+    <section class="syntax" id="syntax" aria-labelledby="syntax-title">
+        <div class="section-heading">
+            <p class="eyebrow">SYNTAX</p>
+            <h2 id="syntax-title">常用写法</h2>
+        </div>
+        <div class="syntax-grid">
+            <article>
+                <h3>标题</h3>
+                <pre><code># 一级标题
+## 二级标题
+### 三级标题</code></pre>
+            </article>
+            <article>
+                <h3>强调</h3>
+                <pre><code>**加粗**
+*斜体*
+`行内代码`</code></pre>
+            </article>
+            <article>
+                <h3>列表</h3>
+                <pre><code>- 无序列表
+1. 有序列表
+- [x] 任务项</code></pre>
+            </article>
+            <article>
+                <h3>表格</h3>
+                <pre><code>| 项目 | 状态 |
+| --- | --- |
+| 页面 | 完成 |</code></pre>
+            </article>
+        </div>
+    </section>
+</main>
+
+<script type="text/plain" id="sample-log"># 今天的学习日志
+
+## 学习内容
+
+- 理解 Thymeleaf 模板页面
+- 使用编辑框测试 Markdown
+- 通过 Java 后端生成预览 HTML
+
+> 小步迭代，比一次做完更稳。
+
+- [x] 页面可访问
+- [ ] 后续接入日志文件</script>
+
+<script type="text/plain" id="sample-table"># 功能清单
+
+| 功能 | 状态 | 说明 |
+| --- | --- | --- |
+| 登录 | 暂不需要 | 当前不做用户系统 |
+| 数据库 | 暂不接入 | 先用页面测试 Markdown |
+| 预览 | 已完成 | 后端解析 Markdown |</script>
+
+<script type="text/plain" id="sample-code"># Java 代码记录
+
+```java
+public class MarkdownDemo {
+    public static void main(String[] args) {
+        System.out.println("Markdown preview");
+    }
+}
+```
+
+这段代码会显示在右侧预览区。</script>
+
+<script src="/app.js"></script>
+</body>
+</html>
